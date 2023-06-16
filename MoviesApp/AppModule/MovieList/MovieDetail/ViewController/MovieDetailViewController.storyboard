@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="MovieDetailViewController" customModule="MoviesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6t5-Wl-owe">
+                                <rect key="frame" x="50" y="74" width="924" height="1222"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PFC-9k-2gA">
+                                        <rect key="frame" x="10" y="0.0" width="904" height="590.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtW-4g-b9J">
+                                                <rect key="frame" x="0.0" y="0.0" width="904" height="525"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="Aii-jE-jmE">
+                                                        <rect key="frame" x="302" y="50" width="300" height="400"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="200" id="6SJ-xW-rCs">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="width" constant="100" id="Ysd-24-hJJ">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Of0-OP-22N" customClass="SwiftyStarRatingView" customModule="SwiftyStarRatingView">
+                                                        <rect key="frame" x="302" y="465" width="300" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="iOb-5o-9Q5"/>
+                                                            <constraint firstAttribute="width" constant="200" id="kgb-rN-3Ux">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="Aii-jE-jmE" firstAttribute="centerX" secondItem="gtW-4g-b9J" secondAttribute="centerX" id="2pY-5k-0s6"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Of0-OP-22N" secondAttribute="bottom" constant="10" id="3HH-8L-AQU"/>
+                                                    <constraint firstItem="Of0-OP-22N" firstAttribute="top" secondItem="Aii-jE-jmE" secondAttribute="bottom" constant="15" id="aEA-YK-7Dy"/>
+                                                    <constraint firstItem="Of0-OP-22N" firstAttribute="centerX" secondItem="gtW-4g-b9J" secondAttribute="centerX" id="aeY-Lz-55a"/>
+                                                    <constraint firstItem="Aii-jE-jmE" firstAttribute="top" secondItem="gtW-4g-b9J" secondAttribute="top" constant="50" id="qvc-u5-cae"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7r-vA-Wb5">
+                                                <rect key="frame" x="0.0" y="535" width="904" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edI-np-UZ7">
+                                                <rect key="frame" x="0.0" y="565.5" width="904" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="0My-gb-SVg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxR-Wa-hWO">
+                                        <rect key="frame" x="10" y="610.5" width="904" height="485"/>
+                                        <string key="text">Fast X",
+            "overview": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.Fast X",
+            "overview": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.Fast X",
+            "overview": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.Fast X",
+            "overview": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.Fast X",
+            "overview": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.Fast X",
+            "overview": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.Fast X",
+            "overview": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="PFC-9k-2gA" firstAttribute="leading" secondItem="6t5-Wl-owe" secondAttribute="leading" constant="10" id="4XD-t3-e9J"/>
+                                    <constraint firstItem="gxR-Wa-hWO" firstAttribute="top" secondItem="PFC-9k-2gA" secondAttribute="bottom" constant="20" id="5JM-wC-sKh"/>
+                                    <constraint firstAttribute="trailing" secondItem="PFC-9k-2gA" secondAttribute="trailing" constant="10" id="8Qz-07-Gzj"/>
+                                    <constraint firstItem="PFC-9k-2gA" firstAttribute="top" secondItem="6t5-Wl-owe" secondAttribute="top" id="BK7-gl-dyP"/>
+                                    <constraint firstAttribute="bottom" secondItem="gxR-Wa-hWO" secondAttribute="bottom" constant="25" id="CoM-bN-YCE"/>
+                                    <constraint firstItem="PFC-9k-2gA" firstAttribute="centerX" secondItem="6t5-Wl-owe" secondAttribute="centerX" id="NrQ-gA-CcL"/>
+                                    <constraint firstItem="gxR-Wa-hWO" firstAttribute="leading" secondItem="6t5-Wl-owe" secondAttribute="leading" constant="10" id="Zqf-VW-6sF"/>
+                                    <constraint firstAttribute="trailing" secondItem="gxR-Wa-hWO" secondAttribute="trailing" constant="10" id="fqZ-1m-1Bk"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6t5-Wl-owe" secondAttribute="trailing" id="0bO-JA-eW7">
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="6t5-Wl-owe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="5Je-d2-aqD">
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6t5-Wl-owe" secondAttribute="bottom" id="TDD-Oq-YvS">
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="6t5-Wl-owe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jDO-X8-Zcf">
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                            </constraint>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="edI-np-UZ7" id="g3S-Ky-J33"/>
+                        <outlet property="movieImage" destination="Aii-jE-jmE" id="PiH-OL-BRj"/>
+                        <outlet property="movieOverviewLabel" destination="gxR-Wa-hWO" id="tu8-Rf-Gh8"/>
+                        <outlet property="ratingView" destination="Of0-OP-22N" id="yUg-O6-dzg"/>
+                        <outlet property="titleLabel" destination="r7r-vA-Wb5" id="RaM-qQ-6zf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.615384615384613" y="-28.436018957345969"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="placeHolder" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
